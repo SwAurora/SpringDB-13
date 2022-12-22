@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 /**
  * 트랜잭션 - 트랜잭션 매니저
  */
-class MemberServiceV3Test
+class MemberServiceV3_1Test
 {
     public static final String MEMBER_A = "memberA";
     public static final String MEMBER_B = "memberB";
