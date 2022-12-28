@@ -1,10 +1,11 @@
 package hello.jdbc.exception.basic;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.net.ConnectException;
 import java.sql.SQLException;
+
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class CheckedAppTest
 {
@@ -12,7 +13,7 @@ public class CheckedAppTest
     void checked()
     {
         Controller controller = new Controller();
-        Assertions.assertThatThrownBy(controller::request).isInstanceOf(Exception.class);
+        assertThatThrownBy(controller::request).isInstanceOf(Exception.class);
     }
 
     static class Controller
