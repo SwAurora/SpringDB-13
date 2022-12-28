@@ -1,8 +1,9 @@
 package hello.jdbc.exception.basic;
 
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @Slf4j
 public class CheckedTest
@@ -18,7 +19,7 @@ public class CheckedTest
     void checked_throw()
     {
         Service service = new Service();
-        Assertions.assertThatThrownBy(service::callThrow).isInstanceOf(MyCheckedException.class);
+        assertThatThrownBy(service::callThrow).isInstanceOf(MyCheckedException.class);
     }
 
     /**
